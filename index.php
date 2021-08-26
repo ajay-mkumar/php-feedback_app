@@ -21,7 +21,7 @@ if(array_filter($errors)){
 	$username=mysqli_real_escape_string($conn,$_POST['username']);
 	$feedback=mysqli_real_escape_string($conn,$_POST['feedback']);
 
-	$sql="INSERT INTO details(username,feedback) VALUES ('$username','$feedback')";
+	$sql="INSERT INTO detail(username,feedback) VALUES ('$username','$feedback')";
 
 	if(mysqli_query($conn,$sql)){
 		$message='your feedback is successfully taken';

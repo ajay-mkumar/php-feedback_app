@@ -8,7 +8,7 @@ $username=$password=$errors='';
     $_SESSION['name']= $_POST['username'];
        
 
- 	$sql="SELECT * FROM users WHERE username='$username'";
+ 	$sql="SELECT * FROM user WHERE username='$username'";
 
  	$result=mysqli_query($conn,$sql);
  	$count  = mysqli_num_rows($result);

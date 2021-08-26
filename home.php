@@ -5,7 +5,7 @@ include('config/db_connect.php');
 if (isset($_POST['delete'])){
 	$id_to_del=mysqli_real_escape_string($conn,$_POST['id_to_del']);
 
-	$sql="DELETE FROM details WHERE id=$id_to_del";
+	$sql="DELETE FROM detail WHERE id=$id_to_del";
 
 	if(mysqli_query($conn,$sql)){
 		header('location:home.php');
@@ -16,7 +16,7 @@ if (isset($_POST['delete'])){
 }
 
 
-$sql="SELECT * FROM details";
+$sql="SELECT * FROM detail";
 
 $result=mysqli_query($conn,$sql);
 
